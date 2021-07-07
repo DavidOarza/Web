@@ -1,0 +1,65 @@
+#VRML V1.0 ascii
+Material { diffuseColor 1 1 0}
+Cube {
+       width 3
+	   height 0.3
+	   }
+	   Transform {translation -1.35 -1.1 .9}
+Cube {
+       width 0.3
+	   height 2
+	   depth 0.2
+	   }
+	   Transform {translation 0 0 -1.8}
+Cube {
+       width 0.3
+	   height 2
+	   depth 0.2
+	   }
+	   Transform {translation 2.7 0 0}
+Cube {
+       width 0.3
+	   height 2
+	   depth 0.2
+	   }
+	   Transform {translation 0 0 1.8}
+Cube {
+       width 0.3
+	   height 2
+	   depth 0.2
+	   }
+	   Transform {translation -1.35 1.7 -.9}
+	   Material { diffuseColor 0 0 1}
+Cylinder {
+		parts ALL
+		radius 0.3
+		height 1
+		}
+DEF Flower Separator{
+		Material { diffuseColor 0 1 0}
+		Transform {translation -0.2 0.55 0}
+		Cylinder {
+		parts ALL
+		radius 0.01
+		height 0.2
+		}
+		Material { diffuseColor 1 0 0}
+		Transform {translation 0 0.18 0}
+		Sphere{ radius .1}
+	}
+	Separator {
+		Transform {translation .2 0 0}
+		USE Flower
+	}
+	Separator {
+		Transform {translation .4 0 0}
+		USE Flower
+	}
+	Separator {
+		Transform {translation .2 0 .2}
+		USE Flower
+	}
+	Separator {
+		Transform {translation .2 0 -.2}
+		USE Flower
+	}

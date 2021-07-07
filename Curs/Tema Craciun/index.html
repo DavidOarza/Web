@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Christmas Tree</title>
+    <style>
+      body {
+        max-width: 500px;
+        margin: auto;
+
+      }
+      #myCanvas {
+        border-top: 5px solid black;
+		border-bottom: 5px solid black;
+		border-left: 5px solid black;
+		border-right: 5px solid black;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(300, 50);
+        context.lineTo(160, 200);
+        context.lineTo(440, 200);
+        context.lineTo(300, 50);
+
+        context.moveTo(300, 120);
+        context.lineTo(150, 320);
+        context.lineTo(450, 320);
+        context.lineTo(300, 120);
+
+        context.moveTo(300, 180);
+        context.lineTo(130, 450);
+        context.lineTo(470, 450);
+        context.lineTo(300, 180);
+        context.fillStyle = "green"
+        context.fill();
+		    context.strokeStyle = "green";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(200, 190, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(250, 400, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(256, 300, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(315, 250, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(360, 150, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "yellow";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "yellow";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(220, 240, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "yellow";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "yellow";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(375, 380, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "yellow";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "yellow";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(165, 410, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "yellow";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "yellow";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(275, 140, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "blue";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "blue";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(375, 280, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "blue";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "blue";
+        context.stroke();
+
+        context.beginPath();
+        context.arc(305, 340, 5, 0, 2 * Math.PI, false);
+        context.fillStyle = "blue";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "blue";
+        context.stroke();
+
+        context.save();
+        context.scale(2, 1);
+
+        context.beginPath();
+        context.arc(150, 530, 50, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(140, 450);
+        context.lineTo(160, 450);
+        context.lineTo(160, 525);
+        context.lineTo(140, 525);
+        context.lineTo(140, 447);
+        context.fillStyle = "brown"
+        context.fill();
+		    context.strokeStyle = "brown";
+        context.stroke();
+
+        context.restore();
+
+        context.beginPath();
+        context.moveTo(230, 500);
+        context.lineTo(270, 500);
+        context.lineTo(270, 520);
+        context.lineTo(230, 520);
+        context.lineTo(230, 497);
+        context.fillStyle = "blue"
+        context.fill();
+		    context.strokeStyle = "blue";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(270, 530);
+        context.lineTo(320, 530);
+        context.lineTo(320, 570);
+        context.lineTo(270, 570);
+        context.lineTo(270, 570);
+        context.fillStyle = "#42f5a1"
+        context.fill();
+		    context.strokeStyle = "#42f5a1";
+        context.stroke();
+
+
+        context.beginPath();
+        context.moveTo(330, 500);
+        context.lineTo(345, 560);
+        context.fillStyle = "#d2ff2e"
+        context.fill();
+		    context.strokeStyle = "#d2ff2e";
+        context.stroke();
+
+        context.font="50px Serif";
+
+        var gradient = context.createLinearGradient(0, 0, 700, 0);
+        gradient.addColorStop(0.8, "red");
+        gradient.addColorStop(0.15, "green");
+        gradient.addColorStop(0.45, "yellow");
+        //Fill with gradient
+        context.fillStyle=gradient;
+        context.fillText("SARBATORI FERICITE!",50,50);
+      };
+    </script>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+  </body>
+</html>

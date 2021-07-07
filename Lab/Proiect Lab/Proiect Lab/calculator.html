@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Koenigsegg</title>
+  </head>
+  <body>
+    <div class="container">
+        <ul class="nav nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Acasa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="masini.html">Masini</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculator.html">Calculator distanta</a>
+          </li>
+        </ul>
+    </div>
+<br>
+  <form>
+    <div class="form-group w-50 mx-auto d-block">
+        <label for="car">Choose car:</label>
+        <select class="form-control" id="car">
+          <option value="1">Agera</option>
+          <option value="2">Jesko</option>
+          <option value="3">Regera</option>
+          <option value="4">One</option>
+        </select>
+    </div>
+
+    <div class="form-group w-50 mx-auto d-block">
+      <label for="distance">Choose distance:</label>
+      <input id="distance" class="form-control w-50" type="text" placeholder="Enter the distance (in km)">
+    </div>
+
+    <button type="button" class="btn btn-dark mx-auto d-block" onclick="myFunction()">Submit</button>
+  </form>
+  <br>
+    <p class="h5 text-center" id="demo"></p>
+
+  <script>
+  function myFunction() {
+    var x, y, text, strUser;
+
+    x = document.getElementById("distance").value;
+    y = document.getElementById("car");
+    var strUser = y.options[y.selectedIndex].text;
+
+    if (x == "") {
+    alert("Insert a distance");
+    return false;
+    }
+
+    if (strUser=="Agera") {
+      text = x/400;
+      document.getElementById("demo").innerHTML = text.toPrecision(3) + " Hours at max speed";
+    }
+
+    if (strUser=="Jesko") {
+      text = x/531;
+      document.getElementById("demo").innerHTML = text.toPrecision(3) + " Hours at max speed";
+    }
+
+    if (strUser=="Regera") {
+      text = x/410;
+      document.getElementById("demo").innerHTML = text.toPrecision(3) + " Hours at max speed";
+    }
+
+    if (strUser=="One") {
+      text = x/390;
+      document.getElementById("demo").innerHTML = text.toPrecision(3) + " Hours at max speed";
+    }
+  }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Triunghi</title>
+    <style>
+      button {
+        background-color: #00d6f2;
+      }
+    </style>
+    <script src = "functions.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" id="first">
+      <input type="number" id="second">
+      <input type="number" id="third">
+    </div>
+    <div class="container">
+      <button id="verify" onclick="verify()">Verify if it's a triangle</button>
+      <label id="verify_text"></label>
+    </div>
+    <div class="container">
+      <button id="calculate_area" onclick="calculate_area()">Calculate the area of the triangle</button>
+      <label id="calculate_area_text"></label>
+    </div>
+    <div class="container">
+      <button id="calculate_per" onclick="calculate_per()">Calculate the perimeter of the triangle</button>
+      <label id="calculate_per_text"></label>
+    </div>
+    <div class="container">
+      <button id="calculate_cos" onclick="calculate_cos()">Calculate the cosine of the angles</button>
+      <label id="calculate_cos_a"></label>
+      <label id="calculate_cos_b"></label>
+      <label id="calculate_cos_c"></label>
+    </div>
+    <div class="container">
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <button id="draw_triangle" onclick="draw_triangle()">Draw the triangle</button>
+      <button id="clear_triangle" onclick="clear_triangle()">Erase the triangle</button>
+    </div>
+  </body>
+</html>
